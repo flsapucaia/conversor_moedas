@@ -168,19 +168,17 @@ Widget buildTextField(
   return TextField(
     controller: control,
     decoration: InputDecoration(
-        
         labelText: label,
         labelStyle: TextStyle(color: Colors.amber[600]),
         border: OutlineInputBorder(
-           borderSide: BorderSide(color: Colors.black),
-           borderRadius: BorderRadius.circular(15)
-        ),
+            borderSide: BorderSide(color: Colors.black),
+            borderRadius: BorderRadius.circular(15)),
         prefixText: prefix),
     style: TextStyle(
       color: Colors.amber[600],
       fontSize: 25,
     ),
     onChanged: func,
-    keyboardType: TextInputType.number,
+    keyboardType: TextInputType.numberWithOptions(decimal: true),
   );
 }
